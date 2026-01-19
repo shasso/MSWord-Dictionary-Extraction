@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- See https://github.com/sillsdev/lift-standard for more information on the format used here. -->
+<lift producer="SIL.FLEx 8.3.11.43080" version="0.13">
+	<header>
+		<ranges>
+			<range id="dialect" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="etymology" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="grammatical-info" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="lexical-relation" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="note-type" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="paradigm" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="reversal-type" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="semantic-domain-ddp4" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="status" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="users" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="location" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<!-- The following ranges are produced by FieldWorks Language Explorer, and are not part of the LIFT standard. -->
+			<range id="anthro-code" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="translation-type" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<!-- The parts of speech are duplicated in another range because derivational affixes require a "From" PartOfSpeech as well as a "To" PartOfSpeech. -->
+			<range id="from-part-of-speech" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="morph-type" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="exception-feature" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="inflection-feature" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="inflection-feature-type" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="do-not-publish-in" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+			<range id="my verb list" href="file://C:/Users/shasso/Documents/Dictionary Projects/BailisFullDictionary/BailisFullDictionary.lift-ranges"/>
+		</ranges>
+		<fields>
+			<field tag="cv-pattern">
+				<form lang="en">
+					<text>This records the syllable pattern for a LexPronunciation in FieldWorks.</text>
+				</form>
+			</field>
+			<field tag="tone">
+				<form lang="en">
+					<text>This records the tone information for a LexPronunciation in FieldWorks.</text>
+				</form>
+			</field>
+			<field tag="comment">
+				<form lang="en">
+					<text>This records a comment (note) in a LexEtymology in FieldWorks.</text>
+				</form>
+			</field>
+			<field tag="import-residue">
+				<form lang="en">
+					<text>This records residue left over from importing a standard format file into FieldWorks (or LinguaLinks).</text>
+				</form>
+			</field>
+			<field tag="literal-meaning">
+				<form lang="en">
+					<text>This field is used to store a literal meaning of the entry.  Typically, this field is necessary only for a compound or an idiom where the meaning of the whole is different from the sum of its parts.</text>
+				</form>
+			</field>
+			<field tag="summary-definition">
+				<form lang="en">
+					<text>A summary definition (located at the entry level in the Entry pane) is a general definition summarizing all the senses of a primary entry. It has no theoretical value; its use is solely pragmatic.</text>
+				</form>
+			</field>
+			<field tag="scientific-name">
+				<form lang="en">
+					<text>This field stores the scientific name pertinent to the current sense.</text>
+				</form>
+			</field>
+			<field tag="Kioula">
+				<form lang="en">
+					<text>List</text>
+				</form>
+				<form lang="qaa-x-spec">
+					<text>Class=LexEntry; Type=ReferenceAtom; WsSelector=kwsAnal; DstCls=CmCustomItem; range=my verb list</text>
+				</form>
+			</field>
+		</fields>
+	</header>
+	<entry dateCreated="2019-02-11T04:52:52Z" dateModified="2019-02-15T16:48:35Z" id="legation_000530b4-5eae-4845-8256-4a9bfec576ef" guid="000530b4-5eae-4845-8256-4a9bfec576ef">
+		<lexical-unit>
+			<form lang="en">
+				<text>legation</text>
+			</form>
+		</lexical-unit>
+		<trait name="morph-type" value="stem"/>
+		<sense id="266507d3-6eb0-47a2-993e-cf539b456e23" order="0">
+			<grammatical-info value="Noun">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>انتداب . بعثة . مُفوضيّة(في بلد أجنبيّ)</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܡܫܲܕܪܘܼܬܵܐ ܕܝܼܦܠܘܿܡܵܛܝܼܩܵܝܬܵܐ(ܢ.ܫܕܪ)؛ ܩܲܝܘܼܡܘܼܬܵܐ(ܢ.ܩܡ)؛ ܐܝܼܙܓܲܕܘܼܬܵܐ(ܠܟܸܣ ܐܲܬܪܵܐ ܢܘܼܟ݂ܪܵܝܵܐ)(ܢ.)</text>
+				</form>
+			</definition>
+			<trait name="semantic-domain-ddp4" value="6.4.6 zoo"/>
+		</sense>
+		<sense id="ed631980-97c5-4516-8273-8c4ad5caa658" order="1">
+			<grammatical-info value="Noun">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>دار المفوضيّة</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܡܵܘܬܒ݂ܵܐ ܕܡܫܲܕܪܘܼܬܵܐ(ܕ.ܝܬܒ݂)؛ ܒܹܝܬ ܐܝܼܙܓܲܕܘܼܬܵܐ(ܕ.ܒܬ)</text>
+				</form>
+			</definition>
+		</sense>
+	</entry>
+	<entry dateCreated="2018-11-18T05:01:44Z" dateModified="2018-11-18T05:02:31Z" id="irk_000842f0-3204-47e3-98d5-848afe53c8bf" guid="000842f0-3204-47e3-98d5-848afe53c8bf">
+		<lexical-unit>
+			<form lang="en">
+				<text>irk</text>
+			</form>
+		</lexical-unit>
+		<trait name="morph-type" value="stem"/>
+		<sense id="f87e6258-7910-4f03-8588-9f2d8b82a271">
+			<grammatical-info value="Transitive verb">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>يُضجِر . يضايق</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܫܵܚܹܩ، ܫܚܵܩܵܐ؛ ܡܲܕܠܸܚ، ܡܲܕܠܘܼܚܹܐ؛ ܡܲܠܝܸܨ، ܡܲܠܝܘܼܨܹܐ؛ ܡܲܥܝܸܩ، ܡܲܥܝܘܼܩܹܐ؛ ܡܲܣܩܸܕ، ܡܲܣܩܘܼܕܹܐ</text>
+				</form>
+			</definition>
+		</sense>
+	</entry>
+	<entry dateCreated="2017-07-11T02:00:40Z" dateModified="2017-07-11T02:01:24Z" id="bridesmaid_001a5544-b96f-4411-aa08-f266d00c2fe6" guid="001a5544-b96f-4411-aa08-f266d00c2fe6">
+		<lexical-unit>
+			<form lang="en">
+				<text>bridesmaid</text>
+			</form>
+		</lexical-unit>
+		<trait name="morph-type" value="stem"/>
+		<sense id="2241cb41-9fc2-48a7-9d0c-3ae4709c00af">
+			<grammatical-info value="Noun">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>إشبينة العروس</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܫܘܿܫܒ݂ܝܼܢܬܵܐ(ܢ.ܫܫ)؛ ܚܕܘܿܓ݂ܬܵܐ(ܢ.)؛ ܩܲܪܝܼܒ݂ܬܵܐ(ܢ.)، ܩܲܪܘܼܒ݂ܬܵܐ(ܢ.ܩܪܒ݂)</text>
+				</form>
+			</definition>
+		</sense>
+	</entry>
+	<entry dateCreated="2009-09-05T06:20:57Z" dateModified="2013-02-08T18:14:17Z" id="onanism_001abf76-45eb-469e-b35f-ffd260558985" guid="001abf76-45eb-469e-b35f-ffd260558985">
+		<lexical-unit>
+			<form lang="en">
+				<text>onanism</text>
+			</form>
+		</lexical-unit>
+		<trait name="morph-type" value="phrase"/>
+		<sense id="372079c2-020a-48db-8677-c80fa0aa1f93" order="0">
+			<grammatical-info value="Noun">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>استِمناء باليد (العادة السرية)</text>
+				</form>
+				<form lang="en">
+					<text>(see Gen. 38:9)</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܡܸܨܛܲܚܢܵܢܘܼܬܵܐ(ܢ.ܨܚܢ)؛ ܡܚܲܒܠܘܼܬܵܐ(ܢ.ܚܒܠ)؛ ܡܲܚܪܲܒ݂ܬܵܐ(ܕܙܲܪܥܵܐ ܒܓܫܵܦܵܐ)(ܢ.)</text>
+				</form>
+			</definition>
+		</sense>
+		<sense id="904a327f-4c56-4e26-9ac7-d77d9de38eaa" order="1">
+			<grammatical-info value="Noun">
+			</grammatical-info>
+			<definition>
+				<form lang="acm">
+					<text>الجِماع الناقص (يتم بالقذف خارجاً تجنباً للحَمل)</text>
+				</form>
+				<form lang="qaa-x-syr">
+					<text>ܚܟܼܘܼܡܝܵܐ ܚܲܣܝܼܪܵܐ(ܕ.ܚܟܼܡ)(ܚܙܝܼ ܒܪܝܼܬܵܐ 38܆9)؛ ܪܡܵܝ ܙܲܪܥܵܐ ܕܡܲܕܡܟܼܵܐ ܠܒܲܪ ܡ݂ܢ ܪܲܚܡܵܐ ܠܣܘܼܛܵܪ ܒܲܛܢܘܼܬܵܐ(ܕ.ܪܡܐ)</text>
+				</form>
+			</definition>
+		</sense>
+	</entry>
+</lift>
