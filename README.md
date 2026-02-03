@@ -37,6 +37,7 @@ The resulting file can be imported into tools such as **FieldWorks Language Expl
 |------|---------|
 | `convert.py` | Main driver: reads the source Lift file, builds a dictionary of arguments for each entry, selects the correct part‑of‑speech processor, and calls `entry()` for every lexeme. |
 | `utils.py`   | Utility functions: UUID generation, timestamping, XML building (`entry()`), file‑writing (`write_entry_tofile()`), and text‑processing helpers (`remove_parentheses`, `extract_outside_and_inside`, etc.). |
+| `to_flex.py` | Pluggable driver-based converter: transforms CSV dictionary data into well-formed FLEX/LIFT XML. |
 | `collect_dups.py` | (Not covered here) – utilities for detecting duplicate entries. |
 | `extract_text.py` | (Not covered here) – helper for extracting plain text from Word documents. |
 
@@ -95,6 +96,119 @@ The `parser()` function iterates over every `<entry>` in the source Lift file, e
    ```
 
    This will read `./data/BailisFullDictionary.lift` and produce `./data/output.lift`.
+
+---
+
+## CSV to LIFT Conversion (to_flex.py)
+
+Convert CSV dictionary data into FLEX/LIFT XML format using pluggable drivers.
+
+### Features
+
+- **Pluggable drivers**: Abstract `InputDriver` + concrete implementations (e.g., `GADriver` for Giwargiz Aghassi CSV)
+- **Pretty-printed output**: Generates a single well-formed XML document with `<dictionary>` wrapper and XML declaration
+- **Raw mode**: Optional line-by-line entry output for streaming
+- **CLI**: Command-line options for driver selection, input/output paths
+
+### Usage
+
+#### Default: Pretty-printed XML
+
+```bash
+python to_flex.py -d ga -i "data/Giwargiz Aghassi Small Dictionary.csv" -o data/output.lift
+```
+
+This produces a single file `data/output.lift` with all entries wrapped in `<dictionary>` and proper XML declaration.
+
+#### Raw entries (line-delimited)
+
+```bash
+python to_flex.py -d ga -i "data/Giwargiz Aghassi Small Dictionary.csv" -o data/raw_entries.txt --raw
+```
+
+One XML entry per line (no wrapper, no declaration).
+
+#### Show help
+
+```bash
+python to_flex.py --help
+```
+
+### Command-Line Options
+
+- `--driver/-d {ga}`: Input driver type (default: `ga` = Giwargiz Aghassi CSV)
+- `--input/-i PATH`: Input file path (default: `data/Giwargiz Aghassi Small Dictionary.csv`)
+- `--output/-o PATH`: Output XML file path (default: `data/output.lift`)
+- `--raw`: Write raw entries one-per-line instead of a single pretty XML document
+
+### Adding a New Driver
+
+1. Subclass `InputDriver`
+2. Implement `generate_entries()` to yield `(xml_string, ElementTree)` tuples
+3. Register in `main()` and add to `--driver` choices
+
+#### Example
+
+```python
+class MyDriver(InputDriver):
+    def __init__(self, input_path: str):
+        self.input_path = input_path
+
+    def generate_entries(self) -> Iterator[Tuple[str, object]]:
+        # Read from input_path, yield entries
+        for lexeme, definition in my_source():
+            xml_string, tree = utils.entry(lexeme, definition, "noun", "source")
+            yield xml_string, tree
+```
+
+Then update `main()`:
+
+```python
+if args.driver == "ga":
+    driver = GADriver(args.input)
+elif args.driver == "my":
+    driver = MyDriver(args.input)
+```
+
+### Entry Format
+
+All entries are created using `bailis_extraction.utils.entry()`, which generates FLEX/LIFT XML with:
+
+- `<lexical-unit>` containing the Assyrian form
+- `<sense>` with grammatical info, definition, and reversal
+- `<note type="bibliography">` with source attribution
+
+### Output Examples
+
+#### Pretty XML (default)
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<dictionary>
+  <entry id="..." guid="..." dateCreated="..." dateModified="...">
+    <lexical-unit>
+      <form lang="aii">
+        <text>ܠܦܝܦܐ</text>
+      </form>
+    </lexical-unit>
+    <sense id="..." order="0">
+      <grammatical-info value="noun"/>
+      <definition>
+        <form lang="en">
+          <text>Example Word</text>
+        </form>
+      </definition>
+      <reversal type="en">...</reversal>
+      <note type="bibliography">...</note>
+    </sense>
+  </entry>
+  <!-- more entries -->
+</dictionary>
+```
+
+#### Raw entries (--raw)
+
+One compact XML entry per line (suitable for streaming/piping).
 
 ---
 
